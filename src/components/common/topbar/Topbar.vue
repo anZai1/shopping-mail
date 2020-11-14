@@ -1,13 +1,44 @@
 <template>
-  $END$
+  <div id="top-bar" :style="{background:bgCol}">
+    <div class="top-bar-item left">
+      <slot name="left"></slot>
+    </div>
+    <div class="top-bar-item center">
+      <slot name="center"></slot>
+    </div>
+    <div class="top-bar-item right">
+      <slot name="right"></slot>
+    </div>
+
+  </div>
 </template>
 
 <script>
     export default {
-        name: "Topbar"
+        name: "Topbar",
+        props:{
+            bgCol:{
+                type:String,
+                default:"#FE69B3"
+            }
+        }
     }
 </script>
 
 <style scoped>
-
+  #top-bar{
+    width: 100%;
+    height: 44px;
+    /*background: #FE69B3;*/
+    display: flex;
+  }
+  .left{
+    width: 40px;
+  }
+  .right{
+    width: 40px;
+  }
+  .center{
+    flex: 1;
+  }
 </style>

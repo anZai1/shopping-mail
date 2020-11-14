@@ -1,13 +1,27 @@
 <template>
-  $END$
+  <div>
+    <TopBar bgCol="#ff69b4">
+      <div slot="center">
+        <h3>购物街</h3>
+      </div>
+    </TopBar>
+  </div>
 </template>
 
 <script>
+    import TopBar from "@/components/common/topbar/Topbar"
     export default {
-        name: "HomeTopBar"
+        name: "HomeTopBar",
+        components:{
+            TopBar
+        }
     }
 </script>
 
 <style scoped>
-
+  h3{
+    text-align: center;
+    line-height: 44px;
+    color: white;
+  }
 </style>
